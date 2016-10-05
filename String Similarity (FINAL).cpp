@@ -6,7 +6,7 @@ using namespace std;
 Name: foundDuplicates
 */
 
-//added a comment here too
+//added a comment here too version 1234
 long foundDuplicates(const char* a, const int& maximum, char*& subStr)
 {
     long result = 0; int shift = 1;
