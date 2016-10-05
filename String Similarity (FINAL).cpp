@@ -9,7 +9,7 @@ Name: foundDuplicates
 //added a comment here too version 4312
 long foundDuplicates(const char* a, const int& maximum, char*& subStr)
 {
-    long diffname = 0; int shift = 1;
+    long nameChange = 0; int shift = 1;
     
     //increment shift the number of matches found between a[0] and subStr[n]
     while (a[0] == subStr[++shift]);
