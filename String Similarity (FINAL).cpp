@@ -6,33 +6,6 @@ using namespace std;
 Name: foundDuplicates
 */
 
-//added a comment here too version 4312
-long foundDuplicates(const char* a, const int& maximum, char*& subStr)
-{
-    long nameChange = 0; int shift = 1;
-    
-    //increment shift the number of matches found between a[0] and subStr[n]
-    while (a[0] == subStr[++shift]);
-    
-    if (shift < maximum)
-    {
-        //uses the triangular number formula n(n+1)/2 to sum the duplicates
-        result += (long)shift * (shift + 1) / 2;
-    }
-    else
-    {
-        //increment offset the remaining matches found that won't be shifted
-        int offset = 0;
-        while (a[maximum + offset] == subStr[shift + offset]) { offset++; };
-        
-        //m(2*n-m+1)/2 + b = n (n + 1) / 2 - (m - n)((m - n) + 1) / 2 + b
-        result += (long) maximum * (2 * shift - maximum + 1) / 2 + offset;
-    }
-    //increment subStr the number of matches found with shift
-    subStr += shift;
-    
-    return result;
-}
 
 //added a comment here too
 int foundMatches(const char* a, char*& subStr)
